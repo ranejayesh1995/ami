@@ -1,9 +1,14 @@
 ===========30th-July-2025===========
 yum -y update 
+
+#to install git
 yum install -y git 
 
+#to install java
 yum install  -y java-21-amazon-corretto
 yum install -y java-21-amazon-corretto-devel
+
+#to install maven this below is refer by tutor
 cd /opt
 sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
 sudo tar xvf apache-maven-3.9.10-bin.tar.gz
@@ -15,26 +20,89 @@ echo "export PATH=$M2:$PATH" >> .bash_profile
 source ~/.bash_profile
 echo $M2_HOME
 
+#this is resovle by myside to install mvn using gpt
+
+https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
+cd /opt
+# Download from Apache Archive (this works!)
+sudo wget https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+# Extract it
+sudo tar -xvzf apache-maven-3.9.9-bin.tar.gz
+# Check if it extracted
+ls -ltr /opt
+
+cd ~
+# Append to .bash_profile
+echo "export M2_HOME=/opt/apache-maven-3.9.9" >> ~/.bash_profile
+echo 'export M2=$M2_HOME/bin' >> ~/.bash_profile
+echo 'export PATH=$M2:$PATH' >> ~/.bash_profile
+# Reload profile
+source ~/.bash_profile
+# Test it
+echo $M2_HOME
+mvn -version
+
+#==========================
+
+
 git --version; java --version;  /opt/apache-maven-3.9.9/bin/mvn --version
 
 
-
+#jenkins install
+======
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
 sudo yum upgrade
+
+#installing jenkins
 sudo yum install -y jenkins
+
+#service reload
 sudo systemctl daemon-reload
+
 service jenkins start
+
 chkconfig jenkins on
+======
+
+#to install docker
+==
+yum install -y docker
+
+service docker start
+usermod -aG docker ec2-user
+chkconfig docker on 
+==
 
 cat /var/lib/jenkins/secrets/initialAdminPassword
 
 http://publicip:8080
 ==================================
 
+#to check the status of application
 
+service jenkins status
 
+#after that to login jenkins via 8080 port using instance public IPv4
+we have to go to add (IPv4number):8080 in browser
+
+and on that browser will be shown the below link to crack the password and try to login
+/var/lib/jenkins/secrets/initialAdminPassword
+
+copy that link as above mention OR from jenkins browser
+and add in putty server using 
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+so after that you will get the password copy that password we have to add in that instance jenkins/ip 8080 browser
+where we have Administrator password and click on continue 
+
+so you will get to see the option of Customize Jenkins
+
+so it will be highlighte the Install Suggested Plugins
 
 
 
