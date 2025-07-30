@@ -118,6 +118,7 @@ Kubernetes CLI
 Kubernetes :: Pipeline :: DevOps Steps
 Maven Integration
 Pipeline Maven Plugin API
+Pipeline Github
 ===
 give access to jenkins using 
 visudo
@@ -156,7 +157,30 @@ so this path below we have to add in jenkins > tool >jdk path java path
 #Maven path on jenkins>tool>maven
 echo $M2_HOME
 
-to give the access to jenkins do to automation
+--start to give the access to jenkins do to automation 
+JUST CREATE NEW FILE UNDER ROOT AND AS below command and give acces
+
+try this commmand
+ping -c 5 google.com
+
+ping -c 5 google.com > /tmp/google.txt
+
+#to create the file
+cat /tmp/google.txt
+
+ping -c 5 google.com > /tmp/google.txt
+
+ls -ld /tmp/google.txt
+
+chown jenkins:jenkins /tmp/google.txt
+
+chmod 755 /tmp/google/txt
+
+ls -ld /tmp/google.txt
+it should show -rwxr--x readwrite access
+--end togive acces for jenkin
+
+
 
 id jenkins
 
