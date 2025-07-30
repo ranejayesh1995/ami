@@ -154,9 +154,26 @@ so this path below we have to add in jenkins > tool >jdk path java path
 #Maven path on jenkins>tool>maven
 echo $M2_HOME
 
+to give the access to jenkins do to automation
+
+id jenkins
+
+ls -ld /tmp/google.txt
+
+
 
 
 #************************************************
+
+
+
+
+
+
+
+
+
+
 
 yum -y update 
 yum install -y git 
