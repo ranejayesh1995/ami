@@ -116,6 +116,8 @@ Kubernetes
 Kubernetes Credentials
 Kubernetes CLI
 Kubernetes :: Pipeline :: DevOps Steps
+Maven Integration
+Pipeline Maven Plugin API
 ===
 give access to jenkins using 
 visudo
