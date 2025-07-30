@@ -1,4 +1,5 @@
 ===========30th-July-2025===========
+#************************************************
 yum -y update 
 
 #to install git
@@ -103,13 +104,59 @@ where we have Administrator password and click on continue
 so you will get to see the option of Customize Jenkins
 
 so it will be highlighte the Install Suggested Plugins
+click on that and add jenkinsadmin in all and jenkinsadmin@gmail.com as email
+
+#after that install plugins on jenkins browser
+jenkins >manage jenkins > plugins > available plugins
+select this below Plugins to install search aws
+
+AWS Credentials
+Pipeline: AWS Steps
+Kubernetes
+Kubernetes Credentials
+Kubernetes CLI
+Kubernetes :: Pipeline :: DevOps Steps
+===
+give access to jenkins using 
+visudo
+
+#after that add this below line in attached screenshot in pdf 
+
+jenkins ALL=(ALL) NOPASSWD: ALL 
+
+add this as above ss
+To save
+Ctrl + s
+Ctrl + x
+
+then in jenkin > tools> we have to setup the git jdk maven path
+
+#git path
+which git 
+
+#java path
+java --version
+
+which java
+
+readlink -f /usr/bin/java
+
+#then copy the path after executing the readling command
+like this /usr/lib/jvm/java-21-amazon-corretto.x86_64
+
+cd /usr/lib/jvm/java-21-amazon-corretto.x86_64
+
+ls -ltr
+
+so this path below we have to add in jenkins > tool >jdk path java path 
+/usr/lib/jvm/java-21-amazon-corretto.x86_64
+
+#Maven path on jenkins>tool>maven
+echo $M2_HOME
 
 
 
-
-
-
-
+#************************************************
 
 yum -y update 
 yum install -y git 
