@@ -119,6 +119,8 @@ Kubernetes :: Pipeline :: DevOps Steps
 Maven Integration
 Pipeline Maven Plugin API
 Pipeline Github
+Pipeline As YAML (Incubated)
+Pipeline: Stage View
 ===
 give access to jenkins using 
 visudo
