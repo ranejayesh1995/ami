@@ -9,7 +9,7 @@ yum install -y git
 yum install  -y java-21-amazon-corretto
 yum install -y java-21-amazon-corretto-devel
 
-#to install maven this below is refer by tutor
+#to install maven this below is refer by tutor BELOW COMMAND IS OLD SO IN THE END OF MAVEN COMMAND RESOLVED COMMAND IS MENTIONED
 cd /opt
 sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
 sudo tar xvf apache-maven-3.9.10-bin.tar.gz
