@@ -9,6 +9,7 @@ yum install -y git
 yum install  -y java-21-amazon-corretto
 yum install -y java-21-amazon-corretto-devel
 
+#SKIP THIS COMMAND BEACUSE ITS TOO OLD TO INSTALL MAVEN START
 #to install maven this below is refer by tutor BELOW COMMAND IS OLD SO IN THE END OF MAVEN COMMAND RESOLVED COMMAND IS MENTIONED
 cd /opt
 sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
@@ -20,10 +21,12 @@ echo "export M2=$M2_HOME/bin" >> .bash_profile
 echo "export PATH=$M2:$PATH" >> .bash_profile
 source ~/.bash_profile
 echo $M2_HOME
+#SKIP THIS COMMAND BEACUSE ITS TOO OLD TO INSTALL MAVEN END
+
 
 #this is resovle by myside to install mvn using gpt
 
-https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+#https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
 
 cd /opt
 # Download from Apache Archive (this works!)
